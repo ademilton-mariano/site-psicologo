@@ -1,0 +1,8 @@
+.history/
+.vscode/
+.idea/
+.env
+.env.*
+!.env.example
+Thumbs.db
+.DS_Store

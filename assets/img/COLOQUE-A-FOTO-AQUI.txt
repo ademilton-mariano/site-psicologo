@@ -1,0 +1,1 @@
+Coloque aqui a foto do psicólogo. O HTML espera assets/img/psicologo.jpg
