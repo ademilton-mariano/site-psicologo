@@ -67,7 +67,7 @@ h1 em { color:var(--sage-dark); font-style:italic; }
 .trust-row strong { font-family:"Playfair Display"; font-size:20px; }
 .trust-row span { color:var(--muted); font-size:10px; margin-top:2px; }
 
-.hero-visual { position:relative; min-height:560px; display:flex; align-items:center; justify-content:center; }
+.hero-visual { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:24px; min-width:0; }
 .portrait-frame {
   width:min(390px, 85%); aspect-ratio: .78; border-radius: 190px 190px 24px 24px;
   background:linear-gradient(145deg,#d7e1da,#b6c7bc);
@@ -78,7 +78,7 @@ h1 em { color:var(--sage-dark); font-style:italic; }
 .portrait-placeholder small { font-family:"DM Sans"; font-size:9px; margin-top:15px; opacity:.7; }
 .portrait-frame:not(.placeholder) .portrait-placeholder { display:none; }
 .quote-card {
-  position:absolute; width:255px; right:0; bottom:35px; padding:22px 25px;
+  position:relative; width:min(390px, 100%); padding:22px 25px;
   background:rgba(255,253,248,.94); backdrop-filter:blur(10px);
   border:1px solid var(--line); border-radius:20px; box-shadow:0 20px 50px rgba(40,58,50,.12);
 }
@@ -132,7 +132,6 @@ h1 em { color:var(--sage-dark); font-style:italic; }
 
 @media (max-width: 900px) {
   .hero { grid-template-columns:1fr; gap:30px; padding-top:55px; }
-  .hero-visual { min-height:500px; }
   .cards { grid-template-columns:repeat(2,1fr); }
   .two-columns, .process-grid { grid-template-columns:1fr; gap:45px; }
   .cta-box { flex-direction:column; align-items:flex-start; padding:45px 35px; }
@@ -153,9 +152,8 @@ h1 em { color:var(--sage-dark); font-style:italic; }
   .hero-text { font-size:15px; }
   .hero-actions { flex-direction:column; align-items:flex-start; gap:18px; }
   .trust-row { gap:22px; margin-top:38px; }
-  .hero-visual { min-height:450px; }
   .portrait-frame { width:75%; }
-  .quote-card { width:210px; right:0; bottom:25px; padding:18px; }
+  .quote-card { padding:18px; }
   .quote-card p { font-size:15px; }
   .section { padding:80px 0; }
   .cards { grid-template-columns:1fr; }
